@@ -17,10 +17,14 @@ noteForm.addEventListener("submit", async (e) => {
         document.getElementById("content").value;
 
 
+//   const API_URL = "https://quick-notes-saver-vi4b.onrender.com/";
+const API_URL = "https://quick-notes-saver-vi4b.onrender.com";
+
+
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/notes",
+            `${API_URL}/api/notes`,
             {
                 method: "POST",
 
