@@ -1,10 +1,9 @@
 const notesList = document.getElementById("notesList");
-
 const API_URL = "https://quick-notes-saver-vi4b.onrender.com";
 
 async function getNotes() {
     try {
-        const response = await fetch(`${API_URL}/api/notes` );
+        const response = await fetch(`${API_URL}/api/notes`);
 
         if (!response.ok) {
             throw new Error("Failed to get notes");
@@ -73,7 +72,7 @@ async function deleteNote(id) {
     }
 
     try {
-        const response = await fetch(`http://localhost:5000/api/notes/${id}`, {
+        const response = await fetch(`${API_URL}/api/notes/${id}`, {
             method: "DELETE"
         });
 
